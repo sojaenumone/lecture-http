@@ -8,3 +8,11 @@ const content = `HTTP lecture
  2.1 Content Negotiation
  2.2 Cookie
  `;
+
+const handler = (req, res) => {
+  res.write(content)
+  res.end();
+};
+
+const server = http.createServer(handler);
+server.listen(3000, () => console.log("server is running ::3000"));
